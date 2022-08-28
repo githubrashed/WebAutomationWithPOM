@@ -1,6 +1,6 @@
 package com.orangehrmlive.pom.test;
 
-import com.orangehrmlive.pom.base.BaseTest;
+import com.orangehrmlive.pom.basepage.BaseTest;
 import com.orangehrmlive.pom.pages.HomePage;
 import com.orangehrmlive.pom.pages.LoginPage;
 import org.testng.Assert;
