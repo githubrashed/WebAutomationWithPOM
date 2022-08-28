@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.orangehrmlive.pom.test.LoginTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-26T19:16:54" hostname="HOSE2406101335A" time="3.871">
+  <properties/>
+  <testcase name="loginShouldSucceed" classname="com.orangehrmlive.pom.test.LoginTest" time="3.871"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1661541402076	geckodriver	INFO	Listening on 127.0.0.1:60070
+1661541402974	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59012" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RASHED~1.ISL\\AppData\\Local\\Temp\\rust_mozprofileZ64OBi"
+1661541403345	Marionette	INFO	Marionette enabled
+1661541403351	Marionette	INFO	Listening on port 54615
+WebDriver BiDi listening on ws://localhost:59012
+Read port: 54615
+1661541403572	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RASHED~1.ISL\\AppData\\Local\\Temp\\rust_mozprofileZ64OBi\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59012/devtools/browser/ad93925b-d77e-42e1-bb4f-355e71ccfc79
+Aug 27, 2022 1:16:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://opensource-demo.orangehrmlive.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://opensource-demo.orangehrmlive.com."
+1661541418538	Marionette	INFO	Stopped listening on port 54615
+]]></system-err>
+</testsuite>
