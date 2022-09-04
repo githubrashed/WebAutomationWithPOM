@@ -20,12 +20,14 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginShouldSucceed() {
+
         homePage = loginPage.login("Admin", "admin123");
-        Assert.assertTrue(homePage.hasWelcome());
+        Assert.assertTrue(homePage.hasUserName());
     }
 
     @AfterMethod
     public void teatDown() {
         driver.quit();
     }
+
 }

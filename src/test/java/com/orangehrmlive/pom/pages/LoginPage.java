@@ -34,8 +34,6 @@ public class LoginPage extends BaseTest {
         loginBtn.click();
 
         return new HomePage();
-
     }
-
 
 }
