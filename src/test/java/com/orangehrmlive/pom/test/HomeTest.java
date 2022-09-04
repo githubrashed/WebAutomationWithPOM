@@ -8,7 +8,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest {
+public class HomeTest extends BaseTest {
+
     LoginPage loginPage;
     HomePage homePage;
 
@@ -16,18 +17,23 @@ public class LoginTest extends BaseTest {
     public void init() {
         initialization();
         loginPage = new LoginPage();
+        homePage = loginPage.login("Admin", "admin123");
     }
 
     @Test
-    public void loginShouldSucceed() {
-
-        homePage = loginPage.login("Admin", "admin123");
+    public void checkHomePageShouldSucceed() {
         Assert.assertTrue(homePage.hasUserName());
+        System.out.println("");
+    }
+
+    @Test
+    public void checkHomePageTitleShouldSucceed() {
+        Assert.assertTrue(homePage.hasUserName());
+        System.out.println("");
     }
 
     @AfterMethod
     public void teatDown() {
         driver.quit();
     }
-
 }

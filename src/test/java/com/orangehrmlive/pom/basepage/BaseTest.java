@@ -1,4 +1,4 @@
-package com.orangehrmlive.pom.base;
+package com.orangehrmlive.pom.basepage;
 
 import com.orangehrmlive.pom.utils.GeneralUtils;
 import io.github.bonigarcia.wdm.WebDriverManager;

@@ -1,6 +1,6 @@
 package com.orangehrmlive.pom.pages;
 
-import com.orangehrmlive.pom.base.BaseTest;
+import com.orangehrmlive.pom.basepage.BaseTest;
 import com.orangehrmlive.pom.utils.GeneralUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,8 +34,6 @@ public class LoginPage extends BaseTest {
         loginBtn.click();
 
         return new HomePage();
-
     }
-
 
 }
