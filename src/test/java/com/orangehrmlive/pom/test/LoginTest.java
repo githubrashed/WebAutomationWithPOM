@@ -3,6 +3,7 @@ package com.orangehrmlive.pom.test;
 import com.orangehrmlive.pom.basepage.BaseTest;
 import com.orangehrmlive.pom.pages.HomePage;
 import com.orangehrmlive.pom.pages.LoginPage;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,7 +21,6 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginShouldSucceed() {
-
         homePage = loginPage.login("Admin", "admin123");
         Assert.assertTrue(homePage.hasUserName());
     }
