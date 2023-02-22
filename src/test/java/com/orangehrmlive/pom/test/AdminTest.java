@@ -23,20 +23,17 @@ public class AdminTest extends BaseTest {
     }
 
     @Test(priority = 0)
-    public void checkAdminPageShouldSucceed() {
-        Assert.assertTrue(adminPage.hasAdminTitle());
-        System.out.println("Admin Title is available");
+    public void checkAdminTextShouldSucceed() {
+        Assert.assertTrue(adminPage.hasAdminText());
     }
 
     @Test(priority = 1)
     public void hasAdminPageTitle() {
-        Assert.assertTrue(adminPage.hasAdminTitle());
-        System.out.println("Admin Title is available");
+        Assert.assertTrue(adminPage.hasAdminText());
     }
 
     @AfterMethod
     public void teatDown() {
         driver.quit();
     }
-
 }

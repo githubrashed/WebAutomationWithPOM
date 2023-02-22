@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.time.Duration;
-
 public class AdminPage extends BaseTest {
 
     @FindBy(css = ".oxd-topbar-header-breadcrumb-module")
@@ -17,9 +15,7 @@ public class AdminPage extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    public boolean hasAdminTitle() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GeneralUtils.IMPLICIT_WAIT));
+    public boolean hasAdminText() {
         return adminTitleElement.getText().trim().contains("Admin");
     }
-
 }

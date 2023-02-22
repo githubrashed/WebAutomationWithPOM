@@ -20,14 +20,19 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    public void verifyLoginTextExist() {
+        loginPage.loginText();
+    }
+
+    @Test
     public void loginShouldSucceed() {
+        implicitWait();
         homePage = loginPage.login("Admin", "admin123");
         Assert.assertTrue(homePage.hasUserName());
     }
 
     @AfterMethod
-    public void teatDown() {
+    public void tearDown() {
         driver.quit();
     }
-
 }
