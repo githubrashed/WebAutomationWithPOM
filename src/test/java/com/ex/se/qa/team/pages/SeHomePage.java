@@ -36,9 +36,9 @@ public class SeHomePage extends BaseTestSeQATeam {
         return pageTitle;
     }
 
-    public AdminPage clickAdmin() {
+    public SeAdminPage clickAdmin() {
         adminLinkElement.isDisplayed();
         adminLinkElement.click();
-        return new AdminPage();
+        return new SeAdminPage();
     }
 }
