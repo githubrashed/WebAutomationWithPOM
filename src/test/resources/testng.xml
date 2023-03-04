@@ -6,6 +6,7 @@
 
             <class name="com.ex.se.qa.team.test.SeLoginTest"></class>
             <class name="com.ex.se.qa.team.test.SeHomePageTest"></class>
+            <class name="com.ex.se.qa.team.test.SeAdminTest"></class>
 
         </classes>
     </test>
