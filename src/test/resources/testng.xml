@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="ExSEQATeam OrangeHrm Automation Smoke Suite">
     <test verbose="2" preserve-order="true" name="D:/Official/WebAutomationWithPOM">
         <classes>
-            <class name="com.orangehrmlive.pom.test.AdminTest">
-            </class>
-            <class name="com.orangehrmlive.pom.test.HomeTest">
-            </class>
-            <class name="com.orangehrmlive.pom.test.LoginTest">
-            </class>
+
+            <class name="com.ex.se.qa.team.test.SeLoginTest"></class>
+            <class name="com.ex.se.qa.team.test.SeHomePageTest"></class>
+
         </classes>
     </test>
 </suite>
