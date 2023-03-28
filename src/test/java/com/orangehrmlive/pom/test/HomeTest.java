@@ -1,6 +1,6 @@
 package com.orangehrmlive.pom.test;
 
-import com.orangehrmlive.pom.basepage.BaseTest;
+import com.orangehrmlive.pom.orangehrmbasepage.OrangeHrmBaseTest;
 import com.orangehrmlive.pom.pages.HomePage;
 import com.orangehrmlive.pom.pages.LoginPage;
 import org.testng.Assert;
@@ -8,8 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class HomeTest extends BaseTest {
-
+public class HomeTest extends OrangeHrmBaseTest {
     LoginPage loginPage;
     HomePage homePage;
 
@@ -20,20 +19,18 @@ public class HomeTest extends BaseTest {
         homePage = loginPage.login("Admin", "admin123");
     }
 
-    @Test
-    public void checkHomePageShouldSucceed() {
+    @Test(priority = 0)
+    public void checkWelcomeUserShouldSucceed() {
         Assert.assertTrue(homePage.hasUserName());
-        System.out.println("");
     }
 
-    @Test
-    public void checkHomePageTitleShouldSucceed() {
-        Assert.assertTrue(homePage.hasUserName());
-        System.out.println("");
+    @Test(priority = 1)
+    public void checkDashboardTextShouldSucceed() {
+        Assert.assertTrue(homePage.isDashboardTextAvailable());
     }
 
     @AfterMethod
-    public void teatDown() {
+    public void tearDown() {
         driver.quit();
     }
 }
