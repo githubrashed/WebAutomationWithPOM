@@ -1,6 +1,6 @@
 package com.orangehrmlive.pom.test;
 
-import com.orangehrmlive.pom.basepage.BaseTest;
+import com.orangehrmlive.pom.orangehrmbasepage.OrangeHrmBaseTest;
 import com.orangehrmlive.pom.pages.AdminPage;
 import com.orangehrmlive.pom.pages.HomePage;
 import com.orangehrmlive.pom.pages.LoginPage;
@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AdminTest extends BaseTest {
+public class AdminTest extends OrangeHrmBaseTest {
     LoginPage loginPage;
     HomePage homePage;
     AdminPage adminPage;
@@ -33,7 +33,7 @@ public class AdminTest extends BaseTest {
     }
 
     @AfterMethod
-    public void teatDown() {
+    public void tearDown() {
         driver.quit();
     }
 }
