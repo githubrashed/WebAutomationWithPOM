@@ -23,7 +23,24 @@ public class OrangeHrmBaseTest {
         Properties prop = new Properties();
         FileInputStream fileInputStream = new FileInputStream("D:\\Official\\WebAutomationWithPOM\\src\\test\\resources\\credential.properties");
         prop.load(fileInputStream);
-        System.out.println(prop.getProperty("browser"));
+
+        String browserName = prop.getProperty("browser");
+        if (browserName.equals("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+            driver.manage().window().maximize();
+            implicitWait();
+        } else if (browserName.equals("chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            implicitWait();
+        } else {
+            System.out.println("value not found");
+        }
+
+        driver.get(prop.getProperty("applicationUrl"));
+
     }
 
     public WebDriver.Timeouts implicitWait() {
