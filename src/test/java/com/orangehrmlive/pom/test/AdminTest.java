@@ -9,13 +9,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class AdminTest extends OrangeHrmBaseTest {
     LoginPage loginPage;
     HomePage homePage;
     AdminPage adminPage;
 
     @BeforeMethod
-    public void init() {
+    public void init() throws IOException {
         initialization();
         loginPage = new LoginPage();
         homePage = loginPage.login("Admin", "admin123");
