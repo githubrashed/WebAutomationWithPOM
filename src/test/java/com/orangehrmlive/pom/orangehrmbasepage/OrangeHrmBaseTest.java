@@ -6,21 +6,24 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 public class OrangeHrmBaseTest {
     public static WebDriver driver;
 
-    public void initialization() {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
-        driver.manage().window().maximize();
-        implicitWait();
-        driver.get("https://opensource-demo.orangehrmlive.com");
+    public void initialization() throws IOException {
+        Properties prop = new Properties();
+        FileInputStream fileInputStream = new FileInputStream("D:\\Official\\WebAutomationWithPOM\\src\\test\\resources\\credential.properties");
+        prop.load(fileInputStream);
+        System.out.println(prop.getProperty("browser"));
     }
 
     public WebDriver.Timeouts implicitWait() {
