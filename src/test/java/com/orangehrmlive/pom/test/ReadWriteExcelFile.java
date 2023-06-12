@@ -7,7 +7,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class ReadWriteExcelFile {
-
     File file = new File("D:\\Official\\WebAutomationWithPOM\\src\\test\\resources\\TestData.xlsx");
     FileInputStream fileInputStream = new FileInputStream(file);
     XSSFWorkbook wb = new XSSFWorkbook(fileInputStream);

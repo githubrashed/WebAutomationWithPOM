@@ -10,7 +10,6 @@ repositories {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/org.testng/testng
     testImplementation group: 'org.testng', name: 'testng', version: '7.5'
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '4.1.4'
     implementation group: 'com.thedeanda', name: 'lorem', version: '2.1'
