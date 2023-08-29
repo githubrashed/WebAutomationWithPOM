@@ -34,6 +34,11 @@ public class AdminTest extends OrangeHrmBaseTest {
         Assert.assertTrue(adminPage.hasAdminText());
     }
 
+    @Override
+    public String getPageTitle() {
+        return null;
+    }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();

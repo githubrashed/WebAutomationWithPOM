@@ -31,6 +31,11 @@ public class HomeTest extends OrangeHrmBaseTest {
         Assert.assertTrue(homePage.isDashboardTextAvailable());
     }
 
+    @Override
+    public String getPageTitle() {
+        return null;
+    }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();
